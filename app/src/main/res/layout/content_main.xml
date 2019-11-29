@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transitioncontainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <com.example.aiclock.ClockView
+        android:id="@+id/clockView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/textclock2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextClock
+        android:id="@+id/textclock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:format12Hour="hh:mm:ss"
+        android:format24Hour="hh:mm:ss"
+        android:textAlignment="center"
+        android:textSize="80dp"
+        android:timeZone="Asia/Kuala_Lumpur"
+
+
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/textclock2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextClock
+        android:id="@+id/textclock2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="dd/MM/yyyy"
+        android:format24Hour="EEE dd/MM/yyyy"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:timeZone="Asia/Kuala_Lumpur"
+android:layout_marginTop="12dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clockView"
+        app:layout_constraintBottom_toTopOf="@+id/alarm_list"
+        tools:ignore="UnknownIdInLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

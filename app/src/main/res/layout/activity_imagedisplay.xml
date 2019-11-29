@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context="com.example.aiclock.alarmmanager.imagedisplay">
+
+    <Button
+        android:id="@+id/camera_open"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="244dp"
+
+        android:text="snooze alarm "
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/successnotice" />
+    <!--    android:background="@drawable/custome_button"  android:background="@drawable/custome_button"-->
+    <Button
+        android:id="@+id/nextItem"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginBottom="180dp"
+        android:text="Try Other item? "
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_open" />
+
+    <Button
+        android:id="@+id/mathquiz"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginBottom="112dp"
+        android:text="Use math quiz ? "
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextItem" />
+
+    <View
+        android:id="@+id/successnotice"
+        android:layout_width="307dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="177dp"
+        android:background="@color/colorRed"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/require"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="252dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/colorWhite"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/successnotice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/successnotice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

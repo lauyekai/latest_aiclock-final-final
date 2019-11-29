@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aiclock">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service android:name=".alarmmanager.MusicService"
+            android:enabled="true"/>
+
+        <activity android:name=".EditAlarm"
+            android:label="Edit Alarm"/>
+
+        <activity
+            android:name=".SetAlarm"
+            android:label="@string/set_alarm_name"
+            >
+            </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar.White">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".alarmmanager.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.loong.alarm.clock" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".alarmmanager.Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".alarmmanager.ClockAlarmActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".alarmmanager.imagedisplay"
+            ></activity>
+
+        <activity android:name=".alarmmanager.Classify" />
+
+        <activity android:name=".alarmmanager.ChooseModel" />
+
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".alarmmanager.MenuOptions"/>
+
+        <activity android:name=".alarmmanager.ResultActivity"></activity>
+
+        <activity android:name=".alarmmanager.QuestionActivity"/>
+    </application>
+
+</manifest>

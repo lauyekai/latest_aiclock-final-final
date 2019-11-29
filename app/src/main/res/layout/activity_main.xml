@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="@color/colorBlack"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/alarmList"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:foregroundGravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:divider="@color/colorBlack">
+
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
+    <include layout="@layout/content_main" />
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/alarm_list"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_gravity="bottom"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:divider="@color/colorBlack">
+
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@drawable/float_background"
+        android:backgroundTint="@color/colorWhite"
+        android:src="@drawable/ic_add_black_24dp"
+        app:elevation="5dp"
+        app:pressedTranslationZ="5dp"
+        app:borderWidth="0dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/alarm_time"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="TextView"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/alarm_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/alarmweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="TextView" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/alarm_switch"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="right"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorGrey" />
+</LinearLayout>
